@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3417559042441108606}
   - component: {fileID: 3417559042441108601}
-  - component: {fileID: 3956644154177333458}
   m_Layer: 0
   m_Name: BigBoy
-  m_TagString: BigBoy
+  m_TagString: SlotIcon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,16 +81,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3956644154177333458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3417559042441108600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bbba7d545ea750479bd71e6f7c5113b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreValue: 100
