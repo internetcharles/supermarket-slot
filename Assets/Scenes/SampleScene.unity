@@ -133,11 +133,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallBoy
       objectReference: {fileID: 0}
-    - target: {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614,
-        type: 3}
-      propertyPath: m_TagString
-      value: SmallBoy
-      objectReference: {fileID: 0}
     - target: {fileID: 1666403734827188690, guid: 85dddae8af6fb9b4b90ae633229a2614,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -508,11 +503,6 @@ PrefabInstance:
     - target: {fileID: 3417559042441108600, guid: fb6a2c05dd6ecfd488c7981285d854f8,
         type: 3}
       propertyPath: m_Name
-      value: BigBoy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417559042441108600, guid: fb6a2c05dd6ecfd488c7981285d854f8,
-        type: 3}
-      propertyPath: m_TagString
       value: BigBoy
       objectReference: {fileID: 0}
     - target: {fileID: 3417559042441108606, guid: fb6a2c05dd6ecfd488c7981285d854f8,
