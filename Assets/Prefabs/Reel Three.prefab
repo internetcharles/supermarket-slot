@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9208435643604632370}
-  - component: {fileID: 9208435643604632369}
+  - component: {fileID: 1073684853}
+  - component: {fileID: 1073684854}
   m_Layer: 0
   m_Name: Reel Three
   m_TagString: Untagged
@@ -47,25 +48,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &9208435643604632369
-Animator:
-  serializedVersion: 3
+--- !u!111 &1073684853
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9208435643604632368}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 61b4418fbdbaaf94dbaf9701a146956e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9fc99cab5150b2f449073f045fecf301, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9fc99cab5150b2f449073f045fecf301, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &1073684854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208435643604632368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c1b508768f5dc40850c4dd676c91c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SlotReelThree:
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
+  - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
 --- !u!1001 &9208435642122294633
 PrefabInstance:
   m_ObjectHideFlags: 0

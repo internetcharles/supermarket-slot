@@ -46,7 +46,10 @@ MonoBehaviour:
   SmallBoy: {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614,
     type: 3}
   BigBoy: {fileID: 3417559042441108600, guid: fb6a2c05dd6ecfd488c7981285d854f8, type: 3}
-  ReelLength: 5
-  reel1: []
-  reel2: []
-  reel3: []
+  ReelLength: 16
+  reelHeight: 5
+  r1: {fileID: 0}
+  r2: {fileID: 0}
+  r3: {fileID: 0}
+  slotsSpun: 0
+  slotsSpinning: 0

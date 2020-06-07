@@ -14,15 +14,16 @@ public class ReelCreator : MonoBehaviour
     [SerializeField] GameObject SmallBoy = default;
     [SerializeField] GameObject BigBoy = default;
     [SerializeField] private int ReelLength = default;
+    [SerializeField] private int reelHeight = default;
 
-    public List<GameObject> reel1 = new List<GameObject>();
-    public List<GameObject> reel2 = new List<GameObject>();
-    public List<GameObject> reel3 = new List<GameObject>();
+    public ReelOne r1;
+    public ReelTwo r2;
+    public ReelThree r3;
 
+    private GameObject reelOneObject;
+    private GameObject reelTwoObject;
+    private GameObject reelThreeObject;
 
-    private Vector3 reelOneTargetPosition = new Vector3(0, -15);
-    private Vector3 reelTwoTargetPosition = new Vector3(0, -15);
-    private Vector3 reelThreeTargetPosition = new Vector3(0, -15);
 
     private int totalScore = 0;
     public bool slotsSpun = false;
@@ -30,19 +31,23 @@ public class ReelCreator : MonoBehaviour
 
     private Animation anim;
 
+
     // Start is called before the first frame update
 
     void Start()
     {
-
-
-        anim = gameObject.GetComponent<Animation>();
-        anim["SlotSpinReelOne"].layer = 100;
-        anim["SlotSpinReelTwo"].layer = 100;
-        anim["SlotSpinReelThree"].layer = 100;
-
-
         slotsSpun = true;
+
+    }
+
+    void Awake()
+    {
+
+        r1 = reelOneObject.GetComponent<ReelOne>();
+        r2 = reelTwoObject.GetComponent<ReelTwo>();
+        r3 = reelThreeObject.GetComponent<ReelThree>();
+
+
     }
 
     void Update()
@@ -50,93 +55,84 @@ public class ReelCreator : MonoBehaviour
     }
 
 
-    private void InstantiateIcons()
+   // generates probability from random number
+    public void SlotsPicker()
     {
+
+        slotsSpun = true;
+
+
 
         var newReelOne = GameObject.Find("Reel One").transform;
         var newReelTwo = GameObject.Find("Reel Two").transform;
         var newReelThree = GameObject.Find("Reel Three").transform;
 
-
-
-        for (int i = 0; i < ReelLength - 1; i++)
-        {
-            {
-                Vector3 slotPosition = new Vector3(-2, transform.position.y + i * 2,
-                    transform.position.z);
-                Instantiate(reel1[i], slotPosition, Quaternion.identity, newReelOne);
-            }
-        }
-
-        for (int i = 0; i < ReelLength - 1; i++)
-        {
-            {
-                Vector3 slotPosition = new Vector3(0, transform.position.y + i * 2,
-                    transform.position.z);
-                Instantiate(reel2[i], slotPosition, Quaternion.identity, newReelTwo);
-            }
-
-        }
-
-        for (int i = 0; i < ReelLength - 1; i++)
-        {
-            {
-                Vector3 slotPosition = new Vector3(2, transform.position.y + i * 2,
-                    transform.position.z);
-                Instantiate(reel3[i], slotPosition, Quaternion.identity, newReelThree);
-            }
-
-        }
-        slotsSpun = true;
-    }
-
-
-    void SlotsPicker()
-    {
+        r1.SlotReelOne.RemoveRange(0, 13);
+        r2.SlotReelTwo.RemoveRange(0, 13);
+        r3.SlotReelThree.RemoveRange(0, 13);
 
         for (int i = 0; i < ReelLength; i++)
         {
+            
+            Vector3 slotPosition = new Vector3(-2, transform.position.y + reelHeight + i * 2,
+                transform.position.z);
             int randomNumber = UnityEngine.Random.Range(0, 100);
 
             if (randomNumber >= 0 && randomNumber < 75)
             {
-                reel1.Add(SmallBoy);
+                GameObject newSmallBoy = Instantiate(SmallBoy, slotPosition, Quaternion.identity, newReelOne);
+                r1.SlotReelOne.Add(newSmallBoy);
             }
             else if (randomNumber >= 76 && randomNumber < 100)
             {
-                reel1.Add(BigBoy);
+                GameObject newBigBoy = Instantiate(BigBoy, slotPosition, Quaternion.identity, newReelOne);
+                r1.SlotReelOne.Add(newBigBoy);
             }
         }
 
         for (int i = 0; i < ReelLength; i++)
         {
+            Vector3 slotPosition = new Vector3(0, transform.position.y + reelHeight + i * 2,
+                transform.position.z);
             int randomNumber = UnityEngine.Random.Range(0, 100);
 
             if (randomNumber >= 0 && randomNumber < 75)
             {
-                reel2.Add(SmallBoy);
+                GameObject newSmallBoy = Instantiate(SmallBoy, slotPosition, Quaternion.identity, newReelTwo);
+                r2.SlotReelTwo.Add(newSmallBoy);
             }
             else if (randomNumber >= 76 && randomNumber < 100)
             {
-                reel2.Add(BigBoy);
+                GameObject newBigBoy = Instantiate(BigBoy, slotPosition, Quaternion.identity, newReelTwo);
+                r2.SlotReelTwo.Add(newBigBoy);
             }
         }
 
-        for (int i = 0; i < reel1.Count; i++)
+        for (int i = 0; i < ReelLength; i++)
         {
+            Vector3 slotPosition = new Vector3(2, transform.position.y + reelHeight + i * 2,
+                transform.position.z);
             int randomNumber = UnityEngine.Random.Range(0, 100);
 
             if (randomNumber >= 0 && randomNumber < 75)
             {
-                reel3.Add(SmallBoy);
+                GameObject newSmallBoy = Instantiate(SmallBoy, slotPosition, Quaternion.identity, newReelThree);
+                r3.SlotReelThree.Add(newSmallBoy);
             }
             else if (randomNumber >= 76 && randomNumber < 100)
             {
-                reel3.Add(BigBoy);
+                GameObject newBigBoy = Instantiate(BigBoy, slotPosition, Quaternion.identity, newReelThree);
+                r3.SlotReelThree.Add(newBigBoy);
             }
         }
+
+        r1.PlayAnim1();
+        r2.PlayAnim2();
+        r3.PlayAnim3();
+
     }
 
+    /*
     void CheckResults()
     {
         var newReelOne = GameObject.Find("Reel One").transform;
@@ -161,7 +157,7 @@ public class ReelCreator : MonoBehaviour
         }
         Debug.Log(totalScore);
     }
-
+    */
 
     void TurnSlotsOff()
     {
