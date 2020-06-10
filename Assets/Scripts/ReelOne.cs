@@ -11,10 +11,21 @@ public class ReelOne : MonoBehaviour
     // initiating hardcoded slot from unity system
     [SerializeField] public List<GameObject> SlotReelOne;
 
+    public List<Transform> reelOneChildren = default;
 
     // start method plays animation from SlotSpinReelOne
-    void Start()
+    void Update()
     {
+
+
+    }
+
+    public void RefreshReels()
+    {
+        for (int i = 0; i < 13; i++)
+        {
+            Destroy(GetComponent<Transform>().GetChild(i).gameObject);
+        }
     }
 
     //public void PlayAnim1()

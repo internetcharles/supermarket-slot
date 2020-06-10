@@ -11,8 +11,20 @@ public class ReelThree : MonoBehaviour
     // initiating hardcoded slot from unity system
     [SerializeField] public List<GameObject> SlotReelThree;
 
-    void Start()
+    public Transform[] reelThreeObjectList;
+
+
+    void Update()
     {
+        reelThreeObjectList = gameObject.GetComponentsInChildren<Transform>();
+    }
+
+    public void RefreshReels()
+    {
+            for (int i = 0; i < 13; i++)
+        {
+            Destroy(GetComponent<Transform>().GetChild(i).gameObject);
+        }
     }
 
     //public void PlayAnim3()

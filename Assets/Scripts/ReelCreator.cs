@@ -21,7 +21,6 @@ public class ReelCreator : MonoBehaviour
     public ReelThree r3;
 
 
-
     private int totalScore = 0;
     public bool slotsSpun = false;
     public bool slotsSpinning = false;
@@ -60,6 +59,10 @@ public class ReelCreator : MonoBehaviour
         r1.SlotReelOne.RemoveRange(0, 13);
         r2.SlotReelTwo.RemoveRange(0, 13);
         r3.SlotReelThree.RemoveRange(0, 13);
+
+        r1.RefreshReels();
+        r2.RefreshReels();
+        r3.RefreshReels();
 
         for (int i = 0; i < ReelLength; i++)
         {
@@ -122,17 +125,15 @@ public class ReelCreator : MonoBehaviour
     void CheckResults()
     {
 
-        Debug.Log(r3.SlotReelThree[0]);
-
-        if (r1.SlotReelOne[5].tag == r2.SlotReelTwo[5].tag && r1.SlotReelOne[5].tag == r3.SlotReelThree[5].tag)
+        if (r1.SlotReelOne[reelHeight - 2].tag == r2.SlotReelTwo[reelHeight - 2].tag && r1.SlotReelOne[reelHeight - 2].tag == r3.SlotReelThree[reelHeight - 2].tag)
         {
 
-            if (r1.SlotReelOne[5].tag == "BigBoy")
+            if (r1.SlotReelOne[reelHeight - 2].tag == "BigBoy")
             {
                 Debug.Log("You win!");
                 totalScore += 100;
             }
-            else if (r1.SlotReelOne[5].tag == "SmallBoy")
+            else if (r1.SlotReelOne[reelHeight - 2].tag == "SmallBoy")
             {
                 totalScore += 50;
             }

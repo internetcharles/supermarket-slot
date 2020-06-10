@@ -11,9 +11,19 @@ public class ReelTwo : MonoBehaviour
     // initiating hardcoded slot from unity system
     [SerializeField] public List<GameObject> SlotReelTwo;
 
+    public Transform[] reelTwoObjectList;
 
-    void Start()
+    void Update()
     {
+        reelTwoObjectList = gameObject.GetComponentsInChildren<Transform>();
+    }
+
+    public void RefreshReels()
+    {
+        for (int i = 0; i < 13; i++)
+        {
+            Destroy(GetComponent<Transform>().GetChild(i).gameObject);
+        }
     }
 
     //public void PlayAnim2()
