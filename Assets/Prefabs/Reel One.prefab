@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7610930568210427197}
-  - component: {fileID: 538467543}
   - component: {fileID: 538467544}
   m_Layer: 0
   m_Name: Reel One
-  m_TagString: Untagged
+  m_TagString: ReelOne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,22 +47,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &538467543
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7610930568210427187}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: f7bd6cdb77c05d84e984067ad1e15b2c, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: f7bd6cdb77c05d84e984067ad1e15b2c, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &538467544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e094a3ccceb1840813563d18198807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  randomInt: 5
   SlotReelOne:
   - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}
   - {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614, type: 3}

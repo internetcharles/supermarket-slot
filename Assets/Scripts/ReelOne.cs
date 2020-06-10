@@ -15,21 +15,20 @@ public class ReelOne : MonoBehaviour
     // start method plays animation from SlotSpinReelOne
     void Start()
     {
-        PlayAnim1();
     }
 
-    public void PlayAnim1()
-    {
-        anim = gameObject.GetComponent<Animation>();
-        anim["SlotSpinReelOne"].layer = 100;
-        anim.Play("SlotSpinReelOne");
-    }
+    //public void PlayAnim1()
+    //{
+    //    anim = gameObject.GetComponent<Animation>();
+    //    anim["SlotSpinReelOne"].layer = 100;
+    //    anim.Play("SlotSpinReelOne");
+    //}
 
-    public void PlayNewAnim1()
-    {
-        anim = gameObject.GetComponent<Animation>();
-        anim["SlotSpinReelOneSecond"].layer = 100;
-        anim.Play("SlotSpinReelOneSecond");
-    }
+    //public void PlayNewAnim1()
+    //{
+    //    anim = gameObject.GetComponent<Animation>();
+    //    anim["SlotSpinReelOneSecond"].layer = 100;
+    //    anim.Play("SlotSpinReelOneSecond");
+    //}
 
 }

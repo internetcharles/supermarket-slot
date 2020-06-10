@@ -20,9 +20,6 @@ public class ReelCreator : MonoBehaviour
     public ReelTwo r2;
     public ReelThree r3;
 
-    private GameObject reelOneObject;
-    private GameObject reelTwoObject;
-    private GameObject reelThreeObject;
 
 
     private int totalScore = 0;
@@ -43,11 +40,6 @@ public class ReelCreator : MonoBehaviour
     void Awake()
     {
 
-        r1 = reelOneObject.GetComponent<ReelOne>();
-        r2 = reelTwoObject.GetComponent<ReelTwo>();
-        r3 = reelThreeObject.GetComponent<ReelThree>();
-
-
     }
 
     void Update()
@@ -60,8 +52,6 @@ public class ReelCreator : MonoBehaviour
     {
 
         slotsSpun = true;
-
-
 
         var newReelOne = GameObject.Find("Reel One").transform;
         var newReelTwo = GameObject.Find("Reel Two").transform;
@@ -125,28 +115,24 @@ public class ReelCreator : MonoBehaviour
                 r3.SlotReelThree.Add(newBigBoy);
             }
         }
-
-        r1.PlayAnim1();
-        r2.PlayAnim2();
-        r3.PlayAnim3();
-
+        CheckResults();
     }
 
-    /*
+
     void CheckResults()
     {
-        var newReelOne = GameObject.Find("Reel One").transform;
-        var newReelTwo = GameObject.Find("Reel Two").transform;
-        var newReelThree = GameObject.Find("Reel Three").transform;
-        int thirdToLastReel = ReelLength - 3;
-        if (reel1[thirdToLastReel] == reel2[thirdToLastReel] && reel1[thirdToLastReel] == reel3[thirdToLastReel])
+
+        Debug.Log(r3.SlotReelThree[0]);
+
+        if (r1.SlotReelOne[5].tag == r2.SlotReelTwo[5].tag && r1.SlotReelOne[5].tag == r3.SlotReelThree[5].tag)
         {
-            Debug.Log("You win!");
-            if (reel1[thirdToLastReel] == BigBoy)
+
+            if (r1.SlotReelOne[5].tag == "BigBoy")
             {
+                Debug.Log("You win!");
                 totalScore += 100;
             }
-            else if (reel1[thirdToLastReel] == SmallBoy)
+            else if (r1.SlotReelOne[5].tag == "SmallBoy")
             {
                 totalScore += 50;
             }
@@ -157,7 +143,7 @@ public class ReelCreator : MonoBehaviour
         }
         Debug.Log(totalScore);
     }
-    */
+
 
     void TurnSlotsOff()
     {

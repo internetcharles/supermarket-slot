@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 965894930592784474}
   m_Layer: 0
   m_Name: SmallBoy
-  m_TagString: SlotIcon
+  m_TagString: SmallBoy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

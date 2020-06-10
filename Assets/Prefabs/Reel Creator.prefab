@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &496292165289290459
+--- !u!1 &3917009814883706486
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 496292165289290457}
-  - component: {fileID: 496292165289290458}
+  - component: {fileID: 3917009814883706485}
+  - component: {fileID: 3917009814686182807}
   m_Layer: 0
   m_Name: Reel Creator
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &496292165289290457
+--- !u!4 &3917009814883706485
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496292165289290459}
+  m_GameObject: {fileID: 3917009814883706486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.8006993, y: -0.2780897, z: -0.88631105}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &496292165289290458
+--- !u!114 &3917009814686182807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496292165289290459}
+  m_GameObject: {fileID: 3917009814883706486}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 693b5d4b44f3fe14ab553e15f96423d2, type: 3}
@@ -46,10 +46,10 @@ MonoBehaviour:
   SmallBoy: {fileID: 1666403734827188524, guid: 85dddae8af6fb9b4b90ae633229a2614,
     type: 3}
   BigBoy: {fileID: 3417559042441108600, guid: fb6a2c05dd6ecfd488c7981285d854f8, type: 3}
-  ReelLength: 16
+  ReelLength: 13
   reelHeight: 5
-  r1: {fileID: 0}
-  r2: {fileID: 0}
-  r3: {fileID: 0}
+  r1: {fileID: 538467544, guid: 7cd6f6c0190415748bce0619a07a41d6, type: 3}
+  r2: {fileID: 761720790, guid: 9f85ba28d35986e4aa031073cc9b5483, type: 3}
+  r3: {fileID: 1073684854, guid: 192bd57e740d6ed49b22bd39dd8036c9, type: 3}
   slotsSpun: 0
   slotsSpinning: 0

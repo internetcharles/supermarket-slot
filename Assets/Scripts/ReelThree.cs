@@ -13,21 +13,20 @@ public class ReelThree : MonoBehaviour
 
     void Start()
     {
-        PlayAnim3();
     }
 
-    public void PlayAnim3()
-    {
-        anim = gameObject.GetComponent<Animation>();
-        anim["SlotSpinReelThree"].layer = 100;
-        anim.Play("SlotSpinReelThree");
-    }
+    //public void PlayAnim3()
+    //{
+    //    anim = gameObject.GetComponent<Animation>();
+    //    anim["SlotSpinReelThree"].layer = 100;
+    //    anim.Play("SlotSpinReelThree");
+    //}
 
-    public void PlayNewAnim3()
-    {
-        anim = gameObject.GetComponent<Animation>();
-        anim["SlotSpinReelThreeSecond"].layer = 100;
-        anim.Play("SlotSpinReelThreeSecond");
-    }
+    //public void PlayNewAnim3()
+    //{
+    //    anim = gameObject.GetComponent<Animation>();
+    //    anim["SlotSpinReelThreeSecond"].layer = 100;
+    //    anim.Play("SlotSpinReelThreeSecond");
+    //}
 
 }

@@ -14,21 +14,20 @@ public class ReelTwo : MonoBehaviour
 
     void Start()
     {
-        PlayAnim2();
     }
 
-    public void PlayAnim2()
-    {
-        anim = gameObject.GetComponent<Animation>();
-        anim["SlotSpinReelTwo"].layer = 100;
-        anim.Play("SlotSpinReelTwo");
-    }
+    //public void PlayAnim2()
+    //{
+    //    anim = gameObject.GetComponent<Animation>();
+    //    anim["SlotSpinReelTwo"].layer = 100;
+    //    anim.Play("SlotSpinReelTwo");
+    //}
 
-    public void PlayNewAnim2()
-    {
-        anim = gameObject.GetComponent<Animation>();
-        anim["SlotSpinReelTwoSecond"].layer = 100;
-        anim.Play("SlotSpinReelTwoSecond");
-    }
+    //public void PlayNewAnim2()
+    //{
+    //    anim = gameObject.GetComponent<Animation>();
+    //    anim["SlotSpinReelTwoSecond"].layer = 100;
+    //    anim.Play("SlotSpinReelTwoSecond");
+    //}
 
 }
