@@ -63,13 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BigBoy.cs" />
     <Compile Include="Assets\Scripts\ReelCreator.cs" />
     <Compile Include="Assets\Scripts\ReelOne.cs" />
     <Compile Include="Assets\Scripts\ReelThree.cs" />
     <Compile Include="Assets\Scripts\ReelTwo.cs" />
-    <Compile Include="Assets\Scripts\Shredder.cs" />
-    <Compile Include="Assets\Scripts\SmallBoy.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

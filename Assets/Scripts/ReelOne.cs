@@ -20,6 +20,7 @@ public class ReelOne : MonoBehaviour
 
     }
 
+    // children except for the last three destroyed
     public void RefreshReels()
     {
         for (int i = 0; i < 13; i++)
